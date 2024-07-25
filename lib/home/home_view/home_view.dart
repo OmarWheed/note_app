@@ -18,6 +18,7 @@ class HomeView extends StatelessWidget {
         centerTitle: true,
         title: const Text('Tasks'),
       ),
+      
       body: Column(
         children: [
           SizedBox(
