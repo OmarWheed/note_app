@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:note_app/addnote/add_note_screen.dart';
 import 'package:note_app/home/home_widget/list_view_item.dart';
 import 'package:note_app/home/home_widget/search_title.dart';
 
@@ -9,7 +10,11 @@ class HomeView extends StatelessWidget {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.grey.shade200,
-        onPressed: () {},
+        onPressed: () {
+          //go to add note screen
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context) => const AddNoteScreen()));
+        },
         child: const Icon(Icons.add),
       ),
       backgroundColor: Colors.white,
@@ -18,7 +23,6 @@ class HomeView extends StatelessWidget {
         centerTitle: true,
         title: const Text('Tasks'),
       ),
-      
       body: Column(
         children: [
           SizedBox(
